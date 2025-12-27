@@ -23,7 +23,7 @@ const articles = [
   }
 ]
 
-export function Home() {
+export default function Home() {
   return (
     <div>
       <section className="bg-grid py-20">
