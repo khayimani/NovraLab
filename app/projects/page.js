@@ -1,7 +1,7 @@
-export default function ProjectsPage(){
+export function ProjectsPage() {
   const projects = [
-    { title: 'Pinto', desc: 'Smart NFC & link platform', link: '#' },
-    { title: 'Project X', desc: 'Research prototype', link: '#' },
+    { title: 'Pinto', desc: 'Smart NFC & link platform', link: '/Pinto' },
+    
   ]
 
   return (
