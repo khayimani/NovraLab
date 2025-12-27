@@ -1,4 +1,4 @@
-export function ResearchPage() {
+export default function ResearchPage() {
   return (
     <div className="py-20">
       <div className="container mx-auto px-6 lg:px-20">

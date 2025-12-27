@@ -1,4 +1,4 @@
-export function ProjectsPage() {
+export default function ProjectsPage() {
   const projects = [
     { title: 'Pinto', desc: 'Smart NFC & link platform', link: '/Pinto' },
     
