@@ -1,58 +1,54 @@
-"use client";
-import { useState, useEffect } from "react";
+"use client"
+import { useState, useEffect } from "react"
 
-// STEP 1: Paste your Railway Public URL here (no trailing slash)
-const API_BASE_URL = "pinto-production.up.railway.app"
+// FIXED: Added https://
+const API_BASE_URL = "https://pinto-production.up.railway.app"
 
 export default function PintoDashboard() {
-  const [apiKey, setApiKey] = useState<string | null>(null);
-  const [usage, setUsage] = useState<number>(0);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  // FIXED: Removed TypeScript generics like <string>
+  const [apiKey, setApiKey] = useState(null)
+  const [usage, setUsage] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  // Fetch current user status on load
   useEffect(() => {
-    // Ensure the backend has an endpoint for this, or remove if not ready
     fetch(`${API_BASE_URL}/v1/user/status`)
       .then(async (res) => {
-        if (!res.ok) throw new Error("Failed to fetch status");
-        return res.json();
+        if (!res.ok) throw new Error("Failed to fetch status")
+        return res.json()
       })
       .then((data) => {
-         if(data.key) setApiKey(data.key);
-         if(data.usage) setUsage(data.usage);
+         if(data.key) setApiKey(data.key)
+         if(data.usage) setUsage(data.usage)
       })
       .catch((err) => {
-        console.warn("Could not connect to Pinto backend:", err);
-        // Optional: fail silently or show a small connection error
-      });
-  }, []);
+        console.warn("Could not connect to Pinto backend:", err)
+      })
+  }, [])
 
   const handleGenerate = async () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true)
+    setError(null)
     try {
-      // Calls the Railway backend to generate a real key
       const res = await fetch(`${API_BASE_URL}/v1/auth/generate-key`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        // If your backend requires a user ID, pass it here
         body: JSON.stringify({ userId: "demo_user" }) 
-      });
+      })
 
-      if (!res.ok) throw new Error(`Server error: ${res.statusText}`);
+      if (!res.ok) throw new Error(`Server error: ${res.statusText}`)
 
-      const data = await res.json();
-      setApiKey(data.apiKey || data.key); // Adjust based on your actual backend response
+      const data = await res.json()
+      setApiKey(data.apiKey || data.key)
     } catch (error) {
-      console.error("Failed to generate key:", error);
-      setError("Could not connect to server. Check your Railway URL.");
+      console.error("Failed to generate key:", error)
+      setError("Could not connect to server. Check your Railway URL.")
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <main className="min-h-screen bg-white text-black px-6 py-20">
@@ -105,5 +101,5 @@ export default function PintoDashboard() {
         </div>
       </div>
     </main>
-  );
+  )
 }
