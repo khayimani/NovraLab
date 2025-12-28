@@ -10,10 +10,12 @@ export default function PintoLanding() {
           Connect your app to the world’s data seamlessly. Pinto unifies integrations across Notion, Google, Slack, and more into a single programmable API.
         </p>
         <div className="mt-10 flex justify-center gap-4">
-          <Link href="/pinto/dashboard" className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-white transition">
+          {/* FIXED: Capitalized 'Pinto' to match folder name */}
+          <Link href="/Pinto/dashboard" className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-white transition">
             Get API Key
           </Link>
-          <Link href="/pinto/docs" className=" px-6 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-white transition">
+          {/* FIXED: Capitalized 'Pinto' to match folder name */}
+          <Link href="/Pinto/docs" className=" px-6 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-white transition">
             View Docs
           </Link>
         </div>
@@ -40,7 +42,8 @@ export default function PintoLanding() {
           <p className="text-lg text-gray-700 mb-8">
             Instant setup. No manual OAuth configs. Just your API key.
           </p>
-          <Link href="/pinto/dashboard" className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-black transition">
+          {/* FIXED: Capitalized 'Pinto' to match folder name */}
+          <Link href="/Pinto/dashboard" className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-500 hover:text-black transition">
             Launch Dashboard
           </Link>
         </div>
