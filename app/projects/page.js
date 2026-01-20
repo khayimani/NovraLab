@@ -1,7 +1,10 @@
 export default function ProjectsPage() {
   const projects = [
     { title: 'Pinto', desc: 'Smart NFC & link platform', link: '/Pinto' },
-    
+    { title: 'Agtech', desc: 'Smart agriculture solutions', link: '/agtech' },
+    { title: 'UXUI', desc: 'Design & user experience', link: '/uxui' },
+    { title: 'OutfitsGen', desc: 'AI personal styling', link: '/outfitsgen' },
+    { title: 'Leads Engine', desc: 'Automated lead generation', link: '/leads-gen' },
   ]
 
   return (
