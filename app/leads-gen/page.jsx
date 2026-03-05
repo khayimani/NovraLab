@@ -1,35 +1,104 @@
-"use client"
 import Link from "next/link"
 
-export default function LeadsGenLanding() {
+export const metadata = {
+    title: "Leads Engine — NovraLab",
+    description: "Automated lead generation and qualification to supercharge your sales pipeline.",
+}
+
+const features = [
+    {
+        icon: "🎯",
+        name: "Targeted Prospecting",
+        desc: "Define your ideal customer profile and Leads Engine scours the web to surface matching contacts with verified data.",
+    },
+    {
+        icon: "✉️",
+        name: "Automated Outreach",
+        desc: "Personalised email sequences and intelligent follow-up cadences run on autopilot — so your team focuses on closing.",
+    },
+    {
+        icon: "🔍",
+        name: "Intent Signals",
+        desc: "Detect buying intent from company activity, job postings, and funding news so you reach out at exactly the right moment.",
+    },
+    {
+        icon: "🗂️",
+        name: "CRM Enrichment",
+        desc: "Auto-populate your CRM with verified emails, LinkedIn profiles, company size, and tech stack data in real time.",
+    },
+    {
+        icon: "📈",
+        name: "Pipeline Analytics",
+        desc: "Full-funnel dashboards tracking open rates, reply rates, meetings booked, and revenue attribution.",
+    },
+    {
+        icon: "🤝",
+        name: "Team Collaboration",
+        desc: "Assign leads, leave notes, and share sequences across your sales team with role-based access control.",
+    },
+]
+
+export default function LeadsGenPage() {
     return (
-        <main className="min-h-screen bg-white text-black">
-            <section className="max-w-6xl mx-auto px-6 py-24 text-center">
-                <h1 className="text-5xl font-bold mb-6">Leads Engine</h1>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Supercharge your sales pipeline. Automated lead generation and qualification to help you grow faster.
-                </p>
-                <div className="mt-10 flex justify-center gap-4">
-                    <Link href="https://leads-gen.novralab.com" className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-800 transition">
-                        Start Generating
-                    </Link>
+        <div className="product-page">
+            {/* Hero */}
+            <section className="product-hero">
+                <div className="product-hero-inner">
+                    <span className="product-hero-badge">Leads Engine — NovraLab</span>
+                    <h1 className="product-hero-title">
+                        Fill your pipeline.<br />Automatically.
+                    </h1>
+                    <p className="product-hero-sub">
+                        Leads Engine finds, qualifies, and engages your ideal customers — so your
+                        sales team spends every minute on conversations that matter, not prospecting.
+                    </p>
+                    <div className="product-cta-group">
+                        <a href="https://leads-gen.novralab.com" className="product-cta-primary">
+                            Start Generating →
+                        </a>
+                        <Link href="/contact" className="product-cta-secondary">
+                            Book a demo
+                        </Link>
+                    </div>
                 </div>
             </section>
 
-            <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12 text-gray-700">
-                <div>
-                    <h3 className="text-xl font-semibold mb-2 text-black">Targeted Search</h3>
-                    <p>Find high-quality leads that match your ideal customer profile.</p>
+            {/* Stats */}
+            <div className="stats-strip">
+                <div className="stat-item">
+                    <div className="stat-number">5×</div>
+                    <div className="stat-label">More meetings booked</div>
                 </div>
-                <div>
-                    <h3 className="text-xl font-semibold mb-2 text-black">Automated Outreach</h3>
-                    <p>Engage prospects with personalized email sequences and follow-ups.</p>
+                <div className="stat-item">
+                    <div className="stat-number">Verified</div>
+                    <div className="stat-label">Contact data</div>
                 </div>
-                <div>
-                    <h3 className="text-xl font-semibold mb-2 text-black">Analytics</h3>
-                    <p>Track performance and optimize your campaigns for better conversion.</p>
+                <div className="stat-item">
+                    <div className="stat-number">Auto</div>
+                    <div className="stat-label">Follow-up sequences</div>
+                </div>
+                <div className="stat-item">
+                    <div className="stat-number">Real-time</div>
+                    <div className="stat-label">Intent signals</div>
+                </div>
+            </div>
+
+            {/* Features */}
+            <section className="product-features">
+                <div className="product-features-header">
+                    <p className="product-features-label">Platform capabilities</p>
+                    <h2 className="product-features-title">Every tool your pipeline needs</h2>
+                </div>
+                <div className="product-features-grid">
+                    {features.map((f) => (
+                        <div key={f.name} className="product-feature-card">
+                            <div className="product-feature-icon">{f.icon}</div>
+                            <div className="product-feature-name">{f.name}</div>
+                            <p className="product-feature-desc">{f.desc}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
-        </main>
+        </div>
     )
 }
