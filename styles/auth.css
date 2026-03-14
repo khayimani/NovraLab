@@ -68,7 +68,9 @@
   transition: color 0.2s, border-color 0.2s;
 }
 
-.auth-tab:hover { color: #111827; }
+.auth-tab:hover {
+  color: #111827;
+}
 
 .auth-tab--active {
   color: #111827;
@@ -125,6 +127,53 @@
 .auth-btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Secondary button */
+.auth-btn-secondary {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.auth-btn-secondary:hover:not(:disabled) {
+  background-color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+.auth-btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.25rem 0;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.auth-divider-text {
+  padding: 0 10px;
 }
 
 /* Error */
