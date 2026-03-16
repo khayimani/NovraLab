@@ -38,6 +38,7 @@ export default function Footer() {
               <li><Link href="/agtech">AgTech</Link></li>
               <li><Link href="/outfitsgen">OutfitsGen</Link></li>
               <li><Link href="/leads-gen">LeadGen</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
             </ul>
           </div>
 
@@ -46,6 +47,8 @@ export default function Footer() {
             <h4 className="footer-heading">Legal</h4>
             <ul className="footer-links">
               <li><Link href="/terms">Terms &amp; Conditions</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
+              <li><Link href="/refund-policy">Refund Policy</Link></li>
               <li><Link href="/contact">Contact</Link></li>
               <li>
                 <a href="mailto:legal@novralab.com">legal@novralab.com</a>
