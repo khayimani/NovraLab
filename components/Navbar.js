@@ -16,6 +16,7 @@ export default function Navbar() {
           <Link href="/mission" className="nav-link">Mission</Link>
           <Link href="/projects" className="nav-link">Projects</Link>
           <Link href="/research" className="nav-link">Research</Link>
+          <Link href="/novracomp" className="nav-link">NovraComp</Link>
           <Link href="/terms" className="nav-link">Terms</Link>
           <Link href="/contact" className="nav-link">Contact</Link>
           <Link
@@ -44,6 +45,7 @@ function MobileMenu() {
           <li><a href="/mission" className="nav-link block">Mission</a></li>
           <li><a href="/projects" className="nav-link block">Projects</a></li>
           <li><a href="/research" className="nav-link block">Research</a></li>
+          <li><a href="/novracomp" className="nav-link block">NovraComp</a></li>
           <li><a href="/terms" className="nav-link block">Terms</a></li>
           <li><a href="/contact" className="nav-link block">Contact</a></li>
           <li><a href="/auth" className="nav-link block font-semibold">Sign In →</a></li>

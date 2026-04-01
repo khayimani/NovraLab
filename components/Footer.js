@@ -38,6 +38,7 @@ export default function Footer() {
               <li><Link href="/agtech">AgTech</Link></li>
               <li><Link href="/outfitsgen">OutfitsGen</Link></li>
               <li><Link href="/leads-gen">LeadGen</Link></li>
+              <li><Link href="/novracomp">NovraComp</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
             </ul>
           </div>
