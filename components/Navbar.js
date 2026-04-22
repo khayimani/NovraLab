@@ -13,9 +13,6 @@ export default function Navbar() {
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-muted">
           <Link href="/" className="nav-link">Home</Link>
-          <Link href="/mission" className="nav-link">Mission</Link>
-          <Link href="/projects" className="nav-link">Projects</Link>
-          <Link href="/research" className="nav-link">Research</Link>
           <Link href="/novracomp" className="nav-link">NovraComp</Link>
           <Link href="/terms" className="nav-link">Terms</Link>
           <Link href="/contact" className="nav-link">Contact</Link>
@@ -42,9 +39,6 @@ function MobileMenu() {
       <div className="absolute right-0 mt-2 bg-white border rounded-md p-4 w-52 shadow-lg z-50">
         <ul className="space-y-3 text-sm">
           <li><a href="/" className="nav-link block">Home</a></li>
-          <li><a href="/mission" className="nav-link block">Mission</a></li>
-          <li><a href="/projects" className="nav-link block">Projects</a></li>
-          <li><a href="/research" className="nav-link block">Research</a></li>
           <li><a href="/novracomp" className="nav-link block">NovraComp</a></li>
           <li><a href="/terms" className="nav-link block">Terms</a></li>
           <li><a href="/contact" className="nav-link block">Contact</a></li>

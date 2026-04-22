@@ -565,6 +565,169 @@ body {
   line-height: 1.6;
 }
 
+.product-feature-cite {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+}
+
+/* ── NovraComp credibility line ──────────────────────────────────── */
+.novracomp-credibility {
+  background: #111827;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.novracomp-credibility p {
+  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── Hero stat values ────────────────────────────────────────────── */
+.hero-stat-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+/* ── How It Works ────────────────────────────────────────────────── */
+.how-it-works {
+  background: #f9fafb;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.how-it-works-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .how-it-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.how-it-works-step {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  position: relative;
+}
+
+.how-it-works-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111827;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.how-it-works-step-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.how-it-works-step-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── Who It's For ────────────────────────────────────────────────── */
+.who-its-for {
+  border-top: 1px solid var(--border);
+}
+
+.who-its-for-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.who-its-for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .who-its-for-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.who-its-for-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.who-its-for-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.who-its-for-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Sample Report Section ───────────────────────────────────────── */
+.sample-report-section {
+  background: #f9fafb;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.sample-report-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
 /* ── Projects page ──────────────────────────────────────────────── */
 .projects-page {
   padding: 4rem 1.5rem 6rem;

@@ -1,8 +1,8 @@
-// File: /home/khayimani-miambo/NovraLab/app/novracom/page.jsx
-import * as entry from '../../../../app/novracom/page.js'
+// File: /home/khayimani-miambo/NovraLab/app/page.js
+import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/novracom/page.js')
+type TEntry = typeof import('../../../app/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

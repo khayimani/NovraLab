@@ -4,8 +4,8 @@ import Footer from '../components/Footer'
 import PaddleInit from '../components/PaddleInit'
 
 export const metadata = {
-  title: 'NovraLab — Digital Innovation Lab',
-  description: 'NovraLab is a technology lab dedicated to turning research into real-world digital products.',
+  title: 'NovraLab — CySEC & MiFID II Compliance Automation',
+  description: 'NovraLab builds NovraComp, a compliance automation platform for CySEC-regulated investment firms. AI-powered call analysis, violation detection, and audit-ready reporting.',
 }
 
 export default function RootLayout({ children }) {

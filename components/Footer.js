@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="footer-logo-name">NovraLab</span>
             </div>
             <p className="footer-tagline">
-              A digital innovation lab turning research into real-world products.
+              Building compliance automation for CySEC and MiFID II regulated financial firms.
             </p>
           </div>
 
@@ -24,22 +24,19 @@ export default function Footer() {
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/mission">Mission</Link></li>
-              <li><Link href="/projects">Projects</Link></li>
-              <li><Link href="/research">Research</Link></li>
+              <li><Link href="/novracomp">NovraComp</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Product */}
           <div>
-            <h4 className="footer-heading">Services</h4>
+            <h4 className="footer-heading">Product</h4>
             <ul className="footer-links">
-              <li><Link href="/uxui">UX / UI</Link></li>
-              <li><Link href="/agtech">AgTech</Link></li>
-              <li><Link href="/outfitsgen">OutfitsGen</Link></li>
-              <li><Link href="/leads-gen">LeadGen</Link></li>
-              <li><Link href="/novracomp">NovraComp</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/novracomp">NovraComp Platform</Link></li>
+              <li><Link href="/novracomp#how-it-works">How It Works</Link></li>
+              <li><Link href="/novracomp#who-its-for">Who It's For</Link></li>
+              <li><Link href="/contact">Request a Pilot</Link></li>
             </ul>
           </div>
 
@@ -50,7 +47,6 @@ export default function Footer() {
               <li><Link href="/terms">Terms &amp; Conditions</Link></li>
               <li><Link href="/privacy">Privacy Policy</Link></li>
               <li><Link href="/refund-policy">Refund Policy</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
               <li>
                 <a href="mailto:legal@novralab.com">legal@novralab.com</a>
               </li>
@@ -61,10 +57,6 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} NovraLab. All rights reserved.</span>
-          <span className="footer-paddle-note">
-            Payments handled by{' '}
-            <a href="https://www.paddle.com" target="_blank" rel="noopener noreferrer">Paddle</a>
-          </span>
         </div>
       </div>
     </footer>
