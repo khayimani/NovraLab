@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PaddleCheckoutButton from '../../components/PaddleCheckoutButton'
 
 export const metadata = {
     title: 'Pricing — NovraLab Compliance Platform',
@@ -10,6 +11,7 @@ const tiers = [
         id: 'small',
         label: 'Small Firm',
         badge: null,
+        priceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_BASE,
         description: 'Ideal for boutique advisory firms, family offices, and early-stage regulated businesses.',
         setup: '€3,000 – €8,000',
         setupNote: 'One-time implementation fee',
@@ -29,6 +31,7 @@ const tiers = [
         id: 'medium',
         label: 'Medium Firm',
         badge: 'Most Popular',
+        priceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_STANDARD,
         description: 'Built for mid-size asset managers, broker-dealers, and multi-entity compliance teams.',
         setup: '€8,000 – €25,000',
         setupNote: 'One-time implementation fee',
@@ -50,6 +53,7 @@ const tiers = [
         id: 'enterprise',
         label: 'Enterprise',
         badge: null,
+        priceId: null,
         description: 'For large financial institutions, banks, and global compliance operations requiring custom deployments.',
         setup: '€25,000 – €80,000',
         setupNote: 'One-time implementation fee',
@@ -171,9 +175,16 @@ export default function PricingPage() {
                                 ))}
                             </ul>
 
-                            <Link href="/contact" className="pricing-cta">
-                                {tier.id === 'enterprise' ? 'Talk to Sales' : 'Get Started'}
-                            </Link>
+                            {tier.priceId ? (
+                                <PaddleCheckoutButton
+                                    priceId={tier.priceId}
+                                    label="Get Started"
+                                />
+                            ) : (
+                                <Link href="/contact" className="pricing-cta">
+                                    Talk to Sales
+                                </Link>
+                            )}
                         </div>
                     ))}
                 </div>

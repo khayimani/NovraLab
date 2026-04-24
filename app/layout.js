@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Paddle Classic JS — required for overlay checkout */}
-        <script src="https://cdn.paddle.com/paddle/paddle.js" async />
+        {/* Paddle Billing v2 — overlay checkout */}
+        <script src="https://cdn.paddle.com/paddle/v2/paddle.js" async />
       </head>
       <body>
         <PaddleInit />
